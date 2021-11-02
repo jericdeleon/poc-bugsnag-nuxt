@@ -22,10 +22,10 @@ export default {
   },
   methods: {
     randomError () {
-      throw new Error('RandomError')
+      this.$bugsnag.notify(new Error('RandomError'))
     },
     differentError () {
-      throw new Error('DifferentError')
+      this.$bugsnag.notify(new Error('DifferentError'))
     }
   }
 }
